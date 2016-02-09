@@ -1,5 +1,7 @@
 class Bag extends Walker {
   
+  ArrayList<Datum> bagData = new ArrayList<Datum>();
+  
 public Bag(PVector initialPosition) {
   super(initialPosition); 
 }
@@ -11,10 +13,11 @@ void display() {
   super.display();
 }
 
-public void bagAdd() {
+public void take(Datum d) {
+  
 }
 
-public void bagDelete() {
+public void delete(Datum d) {
 }
 
 }
