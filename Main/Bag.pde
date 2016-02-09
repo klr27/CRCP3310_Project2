@@ -1,6 +1,4 @@
 class Bag extends Walker {
-
-  final color BAG_COLOR = color(200);
   
 public Bag(PVector initialPosition) {
   super(initialPosition); 

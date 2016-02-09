@@ -2,7 +2,7 @@ class Walker {
 
   final int MAX_VELOCITY = 1;
   final float NOISE_DELTA = 0.005;
-  final int WIDTH = 75;
+  final int WIDTH = 30;
   PVector position;
   PVector velocity;
   PVector acceleration;
@@ -24,10 +24,16 @@ class Walker {
     position.add(velocity);
     velocity.limit(MAX_VELOCITY);
     xOffset += NOISE_DELTA;
-    if (position.y < 0) position.y = STORY_HEIGHT;
-    if (position.y > STORY_HEIGHT) position.y = 0;
+    if (position.y < 0) position.y = STORY_HEIGHT - WIDTH;
+    if (position.y > STORY_HEIGHT - WIDTH) position.y = 0;
     if (position.x < 0) position.x = width;
     if (position.x > width) position.x = 0;
+  }
+  
+  public void stopWalk() {
+    acceleration = new PVector(0, 0);
+    velocity = new PVector(0, 0);
+    
   }
 
   public void applyForce(PVector f) {
@@ -37,6 +43,7 @@ class Walker {
   public void display() {
     rectMode(CENTER);
     stroke(0);
+    fill(0);
     rect(walker.position.x, walker.position.y, WIDTH, WIDTH);
   }
   
