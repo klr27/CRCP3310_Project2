@@ -17,11 +17,12 @@ void setupScreen() {
 
 void runVis() {
   walker.display();
+  bag.display();
   for (int i = storyData.size() - 1; i >= 0; --i) {
     Datum d = storyData.get(i);
     d.display();
     if (bag.isTouching(d)) {
-      bag.
+      bag.take(d);
       storyData.remove(d);
     }
   }

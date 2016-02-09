@@ -41,7 +41,7 @@ class Walker {
 
   void display() {
     colorMode(RGB, 255);
-    //fill(0);
+    fill(0);
     rectMode(CENTER);
     stroke(0);
     rect(walker.position.x, walker.position.y, WIDTH, WIDTH);

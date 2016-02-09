@@ -7,14 +7,12 @@ public Bag(PVector initialPosition) {
 }
 
 void display() {
-  colorMode(RGB, 255); 
   fill(BAG_COLOR);
-  stroke(0);
   super.display();
 }
 
 public void take(Datum d) {
-  
+  bagData.add(d);
 }
 
 public void delete(Datum d) {
