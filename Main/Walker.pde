@@ -2,6 +2,7 @@ class Walker {
 
   final int MAX_VELOCITY = 1;
   final float NOISE_DELTA = 0.005;
+  final int WIDTH = 75;
   PVector position;
   PVector velocity;
   PVector acceleration;
@@ -23,8 +24,8 @@ class Walker {
     position.add(velocity);
     velocity.limit(MAX_VELOCITY);
     xOffset += NOISE_DELTA;
-    if (position.y < 0) position.y = height;
-    if (position.y > height) position.y = 0;
+    if (position.y < 0) position.y = STORY_HEIGHT;
+    if (position.y > STORY_HEIGHT) position.y = 0;
     if (position.x < 0) position.x = width;
     if (position.x > width) position.x = 0;
   }
@@ -33,9 +34,13 @@ class Walker {
     velocity.add(f);
   }
 
-  public void drawWalker() {
+  public void display() {
     rectMode(CENTER);
-    stroke(random(255), random(255), random(255));
-    rect(walker.position.x, walker.position.y, 25, 25);
+    stroke(0);
+    rect(walker.position.x, walker.position.y, WIDTH, WIDTH);
+  }
+  
+  public boolean isTouching(Datum d) {
+    return position.dist(d.position) < (WIDTH/2 + d.diameter/2);
   }
 }
