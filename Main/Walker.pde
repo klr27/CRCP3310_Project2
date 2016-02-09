@@ -29,24 +29,24 @@ class Walker {
     if (position.x < 0) position.x = width;
     if (position.x > width) position.x = 0;
   }
-  
+
   public void stopWalk() {
     acceleration = new PVector(0, 0);
     velocity = new PVector(0, 0);
-    
   }
 
   public void applyForce(PVector f) {
     velocity.add(f);
   }
 
-  public void display() {
+  void display() {
+    colorMode(RGB, 255);
+    //fill(0);
     rectMode(CENTER);
     stroke(0);
-    fill(0);
     rect(walker.position.x, walker.position.y, WIDTH, WIDTH);
   }
-  
+
   public boolean isTouching(Datum d) {
     return position.dist(d.position) < (WIDTH/2 + d.diameter/2);
   }

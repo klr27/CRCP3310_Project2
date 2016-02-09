@@ -1,6 +1,7 @@
 Bag bag;
 Walker walker;
 PVector initialPosition;
+PVector bagPosition;
 
 final int SCREEN_WIDTH = 1200;
 final int STORY_HEIGHT = 425;
@@ -23,8 +24,7 @@ void setup() {
   state = STOP_STATE;
   initColors();
   initStoryData();
-  initialPosition = new PVector(100, STORY_HEIGHT/2);
-  walker = new Walker(initialPosition);
+  initWalkers();
   
 }
 
@@ -34,9 +34,11 @@ void draw() {
   setupScreen();
   if (state == 0){
     walker.stopWalk();
+    bag.stopWalk();
   }
   else {
    walker.walk();
+   bag.walk();
   }
   runVis();
 }

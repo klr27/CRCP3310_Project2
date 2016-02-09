@@ -11,3 +11,10 @@ void initStoryData() {
     storyData.add(new Datum(dataPos, dataHue));
   }
 }
+
+void initWalkers() {
+  initialPosition = new PVector(100, STORY_HEIGHT/2);
+  bagPosition = new PVector(100, 10);
+  walker = new Walker(initialPosition);
+  bag = new Bag(bagPosition);
+}

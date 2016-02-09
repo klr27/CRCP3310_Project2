@@ -4,8 +4,10 @@ public Bag(PVector initialPosition) {
   super(initialPosition); 
 }
 
-public void display() {
+void display() {
+  colorMode(RGB, 255); 
   fill(BAG_COLOR);
+  stroke(0);
   super.display();
 }
 
