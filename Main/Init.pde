@@ -21,9 +21,9 @@ void initStoryData() {
 }
 
 void initWalkers() {
-  bagPos = new PVector(50, 20);
+  bagPos = new PVector(50, 50);
   bag = new Bag(bagPos);
   
-  stackPos = new PVector(50, 70);
+  stackPos = new PVector(50, 100);
   stack = new Stack(stackPos);
 }

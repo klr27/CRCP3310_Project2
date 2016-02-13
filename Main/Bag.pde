@@ -18,9 +18,6 @@ class Bag extends Walker {
       d.display();
     }
     fill(0);
-    noStroke();
-    textSize(14);
-    text("BAG", 10, 420);
     textSize(10);
     String elements = "Elements: " + bagData.size();
     String capacity = "Capacity: " + BAG_CAPACITY;
@@ -30,7 +27,7 @@ class Bag extends Walker {
 
   public void take(Datum d) {
     if (bagData.size() < BAG_CAPACITY) {
-      d.position.x = random(10, SCREEN_WIDTH/4 - 10);
+      d.position.x = random(10, 215);
       d.position.y = random(STORY_HEIGHT + 10, 650);
       bagData.add(d);
       storyData.remove(d);
