@@ -1,20 +1,17 @@
 class Datum {
   PVector position;
-  int hue;
-  final int SATURATION = 90;
-  final int BRIGHTNESS = 90;
+  color c;
   int diameter;
   
-  public Datum(PVector position, int hue) {
+  public Datum(PVector position, color c) {
     this.position = position;
-    this.hue = hue;
+    this.c = c;
     diameter = 10;
   }
   
   public void display() {
     stroke(0);
-    colorMode(HSB, 100);
-    fill(hue, SATURATION, BRIGHTNESS);
+    fill(c);
     ellipse(position.x, position.y, diameter, diameter);
   }
 }
