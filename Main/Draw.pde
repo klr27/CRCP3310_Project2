@@ -43,23 +43,23 @@ void runVis() {
     d.display();
     if (d.position.x <= 375 || (d.position.x > 650 && d.position.x <= 925)) {
       if (bag.isTouching(d)) {
-        //bag.take(d);
+        bag.take(d);
       } else if (stack.isTouching(d)) {
-        //stack.take(d);
+        stack.take(d);
       } else if (array.isTouching(d)) {
-        //array.take(d);
+        array.take(d);
       } else if (queue.isTouching(d)) {
-        //queue.take(d);
+        queue.take(d);
       }
     } else {
       if (bag.isTouching(d)) {
-        //bag.delete(d);
+        bag.delete(d);
       } else if (stack.isTouching(d)) {
-        //stack.delete(d);
+        stack.delete(d);
       } else if (array.isTouching(d)) {
-        //array.delete(d);
+        array.delete(d);
       } else if (queue.isTouching(d)) {
-        //queue.delete(d);
+        queue.delete(d);
       }
     }
   }

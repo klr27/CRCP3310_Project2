@@ -22,8 +22,8 @@ final color QUEUE_COLOR = color(150);
 final color TREE_COLOR = color(120);
 
 ArrayList<Datum> storyData = new ArrayList<Datum>();
-final int TOTAL_DATA = 100;
-final int TOTAL_COLORS = 10;
+final int TOTAL_DATA = 150;
+final int TOTAL_COLORS = 7;
 color [] colors = new color[TOTAL_COLORS];
 
 
@@ -37,9 +37,9 @@ void setup() {
 void draw() {
   background(255);
   setupScreen();
-  //bag.walk();
-  //stack.walk();
-  //array.walk();
-  //queue.walk();
+  bag.walk();
+  stack.walk();
+  array.walk();
+  queue.walk();
   runVis();
 }

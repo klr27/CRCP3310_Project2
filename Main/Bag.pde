@@ -1,7 +1,7 @@
 class Bag extends Walker {
 
   ArrayList<Datum> bagData = new ArrayList<Datum>();
-  final int BAG_CAPACITY = 20;
+  final int BAG_CAPACITY = 50;
 
   public Bag(PVector initialPosition) {
     super(initialPosition);
@@ -12,6 +12,8 @@ class Bag extends Walker {
   void display() {
     fill(BAG_COLOR);
     super.display();
+    fill(0);
+    text("B", position.x - 4, position.y + 5);
     drawState();
   }
 

@@ -12,6 +12,8 @@ class ArrayObject extends Walker {
   void display() {
     fill(ARRAY_COLOR);
     super.display();
+    fill(0);
+    text("A", position.x - 4, position.y + 5);
     drawState();
   }
 

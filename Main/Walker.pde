@@ -1,6 +1,6 @@
 class Walker {
 
-  final int MAX_VELOCITY = 1;
+  final float MAX_VELOCITY = .75;
   final float NOISE_DELTA = 0.005;
   final int WIDTH = 30;
   PVector position;

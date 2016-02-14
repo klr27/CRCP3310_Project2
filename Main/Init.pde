@@ -1,14 +1,13 @@
 void initColors() {
-  colors[0] = color(85, 150, 255);
+  colors[0] = color(178, 0, 157);
   colors[1] = color(35, 245, 232);
   colors[2] = color(196, 245, 52);
   colors[3] = color(215, 209, 255);
-  colors[4] = color(151, 33, 255);
+  colors[4] = color(50, 150, 255);
   colors[5] = color(255, 131, 160);
   colors[6] = color(255, 235, 118);
-  colors[7] = color(255, 170, 0);
-  colors[8] = color(178, 0, 157);
-  colors[9] = color(2, 201, 10);
+
+ 
 }
 
 void initStoryData() {

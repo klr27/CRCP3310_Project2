@@ -14,6 +14,8 @@ class Queue extends Walker {
   void display() {
     fill(QUEUE_COLOR);
     super.display();
+    fill(0);
+    text("Q", position.x - 4, position.y + 5);
     drawState();
   }
 
