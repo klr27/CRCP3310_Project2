@@ -40,6 +40,6 @@ void draw() {
   //bag.walk();
   //stack.walk();
   //array.walk();
-  queue.walk();
+  //queue.walk();
   runVis();
 }

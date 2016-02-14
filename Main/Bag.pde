@@ -39,7 +39,7 @@ class Bag extends Walker {
   public void delete(Datum d) {
     for (Datum datum : bagData) {
       if (datum.c == d.c) {
-        d.position.x = random(10, SCREEN_WIDTH - 10);
+        d.position.x = random(655, 920);
         d.position.y = random(10, STORY_HEIGHT - 10); 
         datum.position.x = random(10, SCREEN_WIDTH - 10);
         datum.position.y = random(10, STORY_HEIGHT - 10); 

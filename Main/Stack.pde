@@ -35,7 +35,7 @@ class Stack extends Walker {
   public void delete(Datum d) {
     Datum datum = stackData.get(stackData.size() - 1);
     if (d.c == datum.c) {
-      d.position.x = random(10, SCREEN_WIDTH - 10);
+      d.position.x = random(10, 370);
       d.position.y = random(10, STORY_HEIGHT - 10); 
       datum.position.x = random(10, SCREEN_WIDTH - 10);
       datum.position.y = random(10, STORY_HEIGHT - 10); 

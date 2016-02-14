@@ -1,7 +1,7 @@
 class ArrayObject extends Walker {
 
   ArrayList<Datum> arrayData = new ArrayList<Datum>();
-  final int ARRAY_CAPACITY = 20;
+  final int ARRAY_CAPACITY = 30;
 
   public ArrayObject(PVector initialPosition) {
     super(initialPosition);
@@ -30,8 +30,8 @@ class ArrayObject extends Walker {
     textSize(10);
     String capacity = "Capacity: " + ARRAY_CAPACITY;
     String elements = "Elements: " + arrayData.size();
-    text(capacity, 360, 540);
-    text(elements, 650, 540);
+    text(elements, 360, 540);
+    text(capacity, 750, 540);
   }
 
   public void take(Datum d) {
@@ -45,7 +45,7 @@ class ArrayObject extends Walker {
   public void delete(Datum d) {
     for (Datum datum : arrayData) {
       if (datum.c == d.c) {
-        d.position.x = random(10, SCREEN_WIDTH - 10);
+        d.position.x = random(10, 370);
         d.position.y = random(10, STORY_HEIGHT - 10); 
         datum.position.x = random(10, SCREEN_WIDTH - 10);
         datum.position.y = random(10, STORY_HEIGHT - 10); 

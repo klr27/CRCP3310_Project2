@@ -29,7 +29,8 @@ void setupScreen() {
   text("BAG", 10, 420);
   text("STACK", 235, 420);
   text("ARRAY", 360, 420);
-  text("CIRCULAR QUEUE", 360, 560);
+  text("CIRCULAR QUEUE", 360, 570);
+  text("BINARY SEARCH TREE", 830, 420);
 }
 
 void runVis() {
@@ -48,7 +49,7 @@ void runVis() {
       } else if (array.isTouching(d)) {
         //array.take(d);
       } else if (queue.isTouching(d)) {
-        queue.take(d);
+        //queue.take(d);
       }
     } else {
       if (bag.isTouching(d)) {
@@ -58,7 +59,7 @@ void runVis() {
       } else if (array.isTouching(d)) {
         //array.delete(d);
       } else if (queue.isTouching(d)) {
-        queue.delete(d);
+        //queue.delete(d);
       }
     }
   }
