@@ -5,6 +5,8 @@ class Bag extends Walker {
 
   public Bag(PVector initialPosition) {
     super(initialPosition);
+    velocity = new PVector(0, -1); 
+    tendency = new PVector(1.75, -.25);
   }
 
   void display() {
@@ -12,7 +14,7 @@ class Bag extends Walker {
     super.display();
     drawState();
   }
-  
+
   void drawState() {
     for (Datum d : bagData) {
       d.display();
@@ -37,6 +39,8 @@ class Bag extends Walker {
   public void delete(Datum d) {
     for (Datum datum : bagData) {
       if (datum.c == d.c) {
+        d.position.x = random(10, SCREEN_WIDTH - 10);
+        d.position.y = random(10, STORY_HEIGHT - 10); 
         datum.position.x = random(10, SCREEN_WIDTH - 10);
         datum.position.y = random(10, STORY_HEIGHT - 10); 
         storyData.add(datum);
@@ -44,6 +48,5 @@ class Bag extends Walker {
         break;
       }
     }
-    
   }
 }

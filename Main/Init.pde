@@ -9,7 +9,6 @@ void initColors() {
   colors[7] = color(255, 170, 0);
   colors[8] = color(178, 0, 157);
   colors[9] = color(2, 201, 10);
-  
 }
 
 void initStoryData() {
@@ -23,7 +22,10 @@ void initStoryData() {
 void initWalkers() {
   bagPos = new PVector(50, 50);
   bag = new Bag(bagPos);
-  
+
   stackPos = new PVector(50, 100);
   stack = new Stack(stackPos);
+
+  arrayPos = new PVector(50, 150);
+  array = new ArrayObject(arrayPos);
 }

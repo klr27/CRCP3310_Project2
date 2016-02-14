@@ -4,6 +4,8 @@ class Stack extends Walker {
 
   public Stack(PVector initialPosition) {
     super(initialPosition);
+    velocity = new PVector(-1, 0); 
+    tendency = new PVector(1.25, .5);
   }
 
   void display() {
@@ -27,16 +29,18 @@ class Stack extends Walker {
   public void take(Datum d) {
     stackData.add(d);
     storyData.remove(d);
-    d.position.x = 287;
+    d.position.x = 287.5;
   }
 
   public void delete(Datum d) {
     Datum datum = stackData.get(stackData.size() - 1);
     if (d.c == datum.c) {
-        datum.position.x = random(10, SCREEN_WIDTH - 10);
-        datum.position.y = random(10, STORY_HEIGHT - 10); 
-        storyData.add(datum);
-        stackData.remove(datum);
+      d.position.x = random(10, SCREEN_WIDTH - 10);
+      d.position.y = random(10, STORY_HEIGHT - 10); 
+      datum.position.x = random(10, SCREEN_WIDTH - 10);
+      datum.position.y = random(10, STORY_HEIGHT - 10); 
+      storyData.add(datum);
+      stackData.remove(datum);
     }
   }
 }

@@ -12,7 +12,7 @@ void setupScreen() {
   text("DELETE", 495, 20);
   text("ADD", 775, 20);
   text("DELETE", 1045, 20);
-  
+
   rectMode(CORNER);
   fill(BAG_COLOR);
   rect(0, STORY_HEIGHT, 225, STATE_HEIGHT);
@@ -24,15 +24,18 @@ void setupScreen() {
   rect(350, 550, 470, STATE_HEIGHT/2);
   fill(TREE_COLOR);
   rect(820, STORY_HEIGHT, 380, STATE_HEIGHT);
-  
+
   fill(0);
-  text("STACK", 235, 420);
   text("BAG", 10, 420);
+  text("STACK", 235, 420);
+  text("ARRAY", 360, 420);
+  text("QUEUE", 360, 560);
 }
 
 void runVis() {
-  //bag.display();
+  bag.display();
   stack.display();
+  array.display();
   for (int i = storyData.size() - 1; i >= 0; --i) {
     Datum d = storyData.get(i);
     d.display();
@@ -41,12 +44,16 @@ void runVis() {
         bag.take(d);
       } else if (stack.isTouching(d)) {
         stack.take(d);
+      } else if (array.isTouching(d)) {
+        array.take(d);
       }
     } else {
       if (bag.isTouching(d)) {
         bag.delete(d);
       } else if (stack.isTouching(d)) {
         stack.delete(d);
+      } else if (array.isTouching(d)) {
+        array.delete(d);
       }
     }
   }

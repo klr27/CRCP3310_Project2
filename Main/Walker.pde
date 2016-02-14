@@ -11,7 +11,8 @@ class Walker {
 
   public Walker(PVector initialPosition) {
     this.position = initialPosition;
-    tendency = new PVector(1, 0);
+    acceleration = new PVector(0,0); 
+    velocity = new PVector(0,0); 
     xOffset = 0.0;
   }
 
