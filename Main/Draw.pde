@@ -29,31 +29,36 @@ void setupScreen() {
   text("BAG", 10, 420);
   text("STACK", 235, 420);
   text("ARRAY", 360, 420);
-  text("QUEUE", 360, 560);
+  text("CIRCULAR QUEUE", 360, 560);
 }
 
 void runVis() {
   bag.display();
   stack.display();
   array.display();
+  queue.display();
   for (int i = storyData.size() - 1; i >= 0; --i) {
     Datum d = storyData.get(i);
     d.display();
     if (d.position.x <= 375 || (d.position.x > 650 && d.position.x <= 925)) {
       if (bag.isTouching(d)) {
-        bag.take(d);
+        //bag.take(d);
       } else if (stack.isTouching(d)) {
-        stack.take(d);
+        //stack.take(d);
       } else if (array.isTouching(d)) {
-        array.take(d);
+        //array.take(d);
+      } else if (queue.isTouching(d)) {
+        queue.take(d);
       }
     } else {
       if (bag.isTouching(d)) {
-        bag.delete(d);
+        //bag.delete(d);
       } else if (stack.isTouching(d)) {
-        stack.delete(d);
+        //stack.delete(d);
       } else if (array.isTouching(d)) {
-        array.delete(d);
+        //array.delete(d);
+      } else if (queue.isTouching(d)) {
+        queue.delete(d);
       }
     }
   }

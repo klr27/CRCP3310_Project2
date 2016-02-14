@@ -1,9 +1,11 @@
 Bag bag;
 Stack stack;
 ArrayObject array;
+Queue queue;
 PVector arrayPos;
 PVector bagPos;
 PVector stackPos;
+PVector queuePos;
 
 final int SCREEN_WIDTH = 1200;
 final int STORY_HEIGHT = 400;
@@ -35,8 +37,9 @@ void setup() {
 void draw() {
   background(255);
   setupScreen();
-  bag.walk();
-  stack.walk();
-  array.walk();
+  //bag.walk();
+  //stack.walk();
+  //array.walk();
+  queue.walk();
   runVis();
 }

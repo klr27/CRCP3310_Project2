@@ -28,4 +28,7 @@ void initWalkers() {
 
   arrayPos = new PVector(50, 150);
   array = new ArrayObject(arrayPos);
+  
+  queuePos = new PVector(50, 200);
+  queue = new Queue(queuePos);
 }
