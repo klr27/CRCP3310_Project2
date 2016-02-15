@@ -1,3 +1,6 @@
+//Project 2: Data Structure Visualization (Data Structure Safari)
+//Kali Ruppert
+
 Bag bag;
 Stack stack;
 ArrayObject array;
